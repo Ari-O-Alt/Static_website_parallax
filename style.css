@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  box-shadow: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  font-size: 1rem;
+  /*font-family: consolas, serif;*/
+  font-family: 'Quicksand', sans-serif;
+  line-height: 1.5;
+}
+
+/*------------------------------GENERAL STYLING SMALL SCREENS----------------*/
+/*---------------------------------------------------------------------------*/
+
+.mother_container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+}
+
+a:link {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:visited {
+  text-decoration: none;
+  color: purple;
+}
+
+/*---------------------------ALL BACKGROUND IMAGES---------------------------*/
+.header {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-image: url(images/head_foot.jpg);
+  height: 700px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.image2 {
+  background-image: url(images/image1.jpg);
+  height: 300px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.image3 {
+  background-image: url(images/image2.jpg);
+  height: 300px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+footer {
+  background-image: url(images/head_foot.jpg);
+  height: 450px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*------------------------------HEADER STYLING------------------------------*/
+
+.to_center {
+  place-self: center;
+  border: 4px solid #000;
+  background: #fff;
+  opacity: 0.7;
+}
+
+.to_center h1 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+/*------------------------------GENERAL SECTIONS STYLING---------------------*/
+
+.image2,
+.image3 {
+  display: grid;
+}
+
+.to_center_too {
+  place-self: center;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.content1,
+.content2,
+.info {
+  padding: 1rem;
+  max-width: 80%;
+  margin: auto;
+}
+
+.content1 h2,
+.content2 h2 {
+  margin: 0 0 0.8rem 0;
+}
+
+.content2 p:last-of-type {
+  margin-bottom: 2rem;
+}
+
+/*------------------------------MEDIA QUERIES--------------------------------*/
+/*---------------------------------------------------------------------------*/
+
+@media only screen and (max-width: 768px) {
+  /*this will stop the parallax effect on mobiles*/
+  header,
+  .image2,
+  .image3,
+  footer {
+    background-attachment: inherit;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .content2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1.5rem;
+  }
+
+  .content1,
+  .content2,
+  .info {
+    padding: 1rem;
+    max-width: 75%;
+    margin: auto;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  body {
+    font-size: 1.1rem;
+  }
+  .content1,
+  .content2,
+  .info {
+    padding: 1rem;
+    max-width: 70%;
+    margin: auto;
+  }
+}
