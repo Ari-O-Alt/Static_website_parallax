@@ -1,1 +1,1 @@
-# Static website demonstrating the parallax concept.
+#### Static website demonstrating the parallax concept.
